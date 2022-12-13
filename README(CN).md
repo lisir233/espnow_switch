@@ -21,6 +21,7 @@ menuconfig 中 选择 store phy calibration data in NVS
 把    esp_phy_calibration_mode_t calibration_mode = PHY_RF_CAL_PARTIAL; 
 换成   esp_phy_calibration_mode_t calibration_mode = PHY_RF_CAL_NONE; 
 
+### menconfig配置
 在 menconfig - Espnow Lite Options - Target Fuction 中配置一个设备为开关，
 配置发射器的按键GPIO引脚
 配置发射器的LED与蜂鸣器GPIO引脚
