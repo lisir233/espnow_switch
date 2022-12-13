@@ -1,0 +1,29 @@
+menu "Espnow Lite Options"
+    choice TARGET_FUCTION
+    prompt "Choose Target fuction"
+    default ESPNOW_SWITCH
+    
+    config ESPNOW_SWITCH
+        bool "ESPNOW_SWITCH"
+    config ESPNOW_BULB
+        bool "ESPNOW_BULB"
+    endchoice
+
+    config ESPNOW_PMK
+        string "ESPNOW primary master key"
+        default "pmk1234567890123"
+        help
+            ESPNOW primary master for the example to use. The length of ESPNOW primary master must be 16 bytes.
+    config ESPNOW_LMK
+        string "ESPNOW local master key"
+        default "lmk1234567890123"
+        help
+            ESPNOW local master for the example to use. The length of ESPNOW local master must be 16 bytes.
+    config WIFI_CHANNEL
+        int "Channel"
+        default 1
+        range 1 14
+        help
+            The channel on which sending and receiving ESPNOW data.
+        
+endmenu
